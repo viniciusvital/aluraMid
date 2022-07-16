@@ -13,4 +13,14 @@ for (let i = 0; i < listaTeclas.length; i++) {
     tecla.onclick = function () {
         tocaSom(idAudio);
     }
+
+    tecla.onkeydown = function (event) {
+        if (event.keyCode === 32 || event.keyCode === 13){
+            tecla.classList.add('ativa');
+        }
+    }
+
+    tecla.onkeyup = function () {
+        tecla.classList.remove('ativa')
+    }
 }
